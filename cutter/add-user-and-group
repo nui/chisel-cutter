@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -ex
+
+uid=$1
+user=$2
+
+echo "$user:*:$uid:$uid:$user:/home/$user:/bin/false" >> etc/passwd
+echo "$user:*:$uid:" >> etc/group
+mkdir -p home/$user
+chown $uid:$uid home/$user
+
