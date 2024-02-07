@@ -22,3 +22,4 @@ COPY --from=builder /usr/local/bin/tini /usr/local/bin/tini
 RUN ["/bin/busybox", "--install", "-s", "/bin"]
 USER nonroot
 WORKDIR /home/nonroot
+CMD ["/bin/sh"]

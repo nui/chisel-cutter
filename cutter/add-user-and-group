@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# usage: /cutter/add-user-and-group 1000 nonroot
+
 set -ex
 
 uid=$1
@@ -9,4 +11,3 @@ echo "$user:*:$uid:$uid:$user:/home/$user:/bin/false" >> etc/passwd
 echo "$user:*:$uid:" >> etc/group
 mkdir -p home/$user
 chown $uid:$uid home/$user
-
