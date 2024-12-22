@@ -8,4 +8,4 @@ RUN --mount=type=bind,source=/docker/scripts/,target=/scripts/ \
     && /scripts/install-tini.sh $TARGETPLATFORM /usr/local/bin/tini
 
 COPY cutter/ /cutter/
-
+COPY docker/scripts/ /cutter/
