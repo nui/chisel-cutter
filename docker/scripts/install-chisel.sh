@@ -5,22 +5,22 @@ set -ex
 target_platform=$1
 install_target=$2
 
-chisel_version=v1.2.0
+chisel_version=v1.4.1
 archive_sha256=""
 
 go_arch=""
 case $target_platform in
     linux/arm/v7 )
         go_arch=arm
-        archive_sha256=9032d26bf1fab57d603447ea86167207ea9419309534c2883ef5d2fcdf8df766
+        archive_sha256=f48f1defe0966d4696c32a59ea8ce9a1b319eeaff86857274c30207eca8d0edb
         ;;
     linux/arm64 )
         go_arch=arm64
-        archive_sha256=c12a73550e0337f3719b74a2e4ed65afcac5dc8a8c324c105f4c829ecb44f615
+        archive_sha256=3606a0363ec3ee4f2d5bb5c81ee3892c6b15e8fe776509c012888a33d3953271
         ;;
     linux/amd64 )
         go_arch=amd64
-        archive_sha256=4cdfd73c1ec5a5c9134453ba4422a000274f04e01435f73ea67da941210e4af5
+        archive_sha256=a82cbaa4b17af2750d4593312cbdc5afd92573aacefdad08721ccf6a5bdef4f5
         ;;
     * )
         >&2 echo "unsupported chisel arch: $target_platform"
