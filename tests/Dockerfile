@@ -1,6 +1,6 @@
 ARG rootfs=/rootfs
 
-FROM chisel-cutter as builder
+FROM chisel-cutter AS builder
 ARG rootfs
 
 WORKDIR $rootfs
